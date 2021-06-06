@@ -42,4 +42,4 @@ class Headlines:
         self.time = time
         self.url = url
         self.image = image
-        self.title = title        
+        self.title = title
