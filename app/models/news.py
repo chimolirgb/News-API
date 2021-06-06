@@ -1,6 +1,6 @@
-class News:
+class Article:
     '''
-    Class that instantiates objects of the news news objects of the news sources
+    Class that instantiates objects of the news article objects of the news sources
     '''
     def __init__(self,author,description,time,url,image,title):
         self.author = author
