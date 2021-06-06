@@ -18,14 +18,10 @@ def get_source(category):
     with urllib.request.urlopen(get_source_url) as url:
         get_sources_data = url.read()
         get_sources_response = json.loads(get_sources_data)
-
         source_results = None
-
         if get_sources_response['sorces']:
             source_results_list = get_sources_response['sources']
             source_results = process_results(source_results_list)
-
-
     return source_results
 
 def process_results(source_list):
@@ -45,10 +41,9 @@ def process_results(source_list):
         if id:
             source_object = Source(id,name,description,url)
             source_results.append(source_object)
-
     return source_results  
 
-    def article_source(id):
+def article_source(id):
     article_source_url = 'https://newsapi.org/v2/top-headlines?sources={}&apiKey={}'.format(id,api_key)
     print(article_source_url)
     with urllib.request.urlopen(article_source_url) as url:
@@ -56,15 +51,12 @@ def process_results(source_list):
         article_source_response = json.loads(article_source_data)
 
         article_source_results = None
-
         if article_source_response['articles']:
             article_source_list = article_source_response['articles']
             article_source_results = process_articles_results(article_source_list)
-
-
     return article_source_results 
 
- def process_articles_results(news):
+def process_articles_results(news):
     '''
     function that processes the json files of articles from the api key
     '''
@@ -80,10 +72,9 @@ def process_results(source_list):
         if url:
             article_objects = Article(author,description,time,image,url,title)
             article_source_results.append(article_objects)
-
     return article_source_results
 
-   def get_category(cat_name):
+def get_category(cat_name):
     '''
     function that gets the response to the category json
     '''
@@ -98,10 +89,9 @@ def process_results(source_list):
         if get_cartegory_response['articles']:
             get_cartegory_list = get_cartegory_response['articles']
             get_cartegory_results = process_articles_results(get_cartegory_list)
-
     return get_cartegory_results  
 
- def get_headlines():
+def get_headlines():
     '''
     function that gets the response to the category json
     '''
@@ -110,7 +100,6 @@ def process_results(source_list):
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
         get_headlines_response = json.loads(get_headlines_data)
-
         get_headlines_results = None
 
         if get_headlines_response['articles']:
