@@ -9,24 +9,24 @@ This project is about creating  an application that will help one list and previ
 # User Stories
 These are the behaviours/features that the application implements for use by a user.
 As a user I would like to:
-. See various news sources
-. Select the ones they prefer
-. See the image,description and time the news article was created
-. Click on an article and read it fully fron the news
+ See various news sources
+ Select the ones they prefer
+ See the image,description and time the news article was created
+Click on an article and read it fully fron the news
 
 ## SetUp/Installation Requirements
 PRerequisites
-.python
-.pip
-.virtualvenv
+python
+pip
+virtualvenv
 
 # Cloning
-.In your terminal
+In your terminal
  $ git clone https://github.com/chimolirgb/News-AP/
 $ cd NewsPI
 
 # Running the Application
-. Creating the virtual environment
+ Creating the virtual environment
 $ python3.8 -m venv --without-pip virtual
   $ source virtual/bin/env
   $ curl https://bootstrap.pypa.io/get-pip.py | python
@@ -44,12 +44,12 @@ $ python3.8 -m venv --without-pip virtual
   * Insert the API Key you received from News Api where <Your-Api-Key> is
 
   # Testing the Application
-  . To run the test for the class files:
+   To run the test for the class files:
     $ python3.8 manage.py tests
 
     # Technologies Used
-    . python
-    . flask
+     python
+     flask
 
     # License
     Copyright (c) 2021 Lucy chimoli
