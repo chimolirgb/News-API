@@ -22,7 +22,37 @@ PRerequisites
 
 # Cloning
 .In your terminal
+ $ git clone https://github.com/chimolirgb/News-AP/
+$ cd NewsPI
+
+# Running the Application
+. Creating the virtual environment
+$ python3.8 -m venv --without-pip virtual
+  $ source virtual/bin/env
+  $ curl https://bootstrap.pypa.io/get-pip.py | python
+
+  # Setting up the API key
+   To be able to gather article info from the News API you will need an API Key.
+
+  * Visit https://newsapi.org/ and register for an API key.
+  * In the root directory of the project folder create a file: start.sh
+  * Insert the following info into it:
+
+          export NEWS_API_KEY='<Your-Api-Key>'
+          python3.6 manage.py server
+
+  * Insert the API Key you received from News Api where <Your-Api-Key> is
+
+  # Testing the Application
+  . To run the test for the class files:
+    $ python3.8 manage.py tests
+
+    # Technologies Used
+    . python
+    . flask
+
+    # License
+    Copyright (c) 2021 Lucy chimoli
 
 
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
